@@ -1,12 +1,15 @@
 import './App.css';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar';
 
 function App() {
   return (
     <>
-      <NavBar />
+      <NavBar contador={ '1' }/>
       <br></br>
-      <h1>Mendez, Yesica Melisa</h1>
+      <ItemListContainer greeting={'Este es el Contenedor para mi proyecto.'}></ItemListContainer>
+      <br></br>
+      <p>Mendez, Yesica Melisa</p>
     </>
   );
 }

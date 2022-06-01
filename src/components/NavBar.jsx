@@ -1,9 +1,10 @@
 import React from 'react';
+import CartWidget from './CartWidget';
 import Logo from './Logo';
 
 import './NavBar.css';
 
-function NavBar() {
+function NavBar( { contador }) {
     return (
         <nav className="navbar navbar-expand-lg navbar-light navbarCustomize">
             <div className="container-fluid">
@@ -24,6 +25,7 @@ function NavBar() {
                         </li>
                     </ul>
                 </div>
+                <div className="cart"><span className='fw-bolder'> { contador } </span><CartWidget></CartWidget></div>
             </div>
         </nav>
     )

@@ -1,3 +1,9 @@
 .navbarCustomize {
     background-color: rgb(219, 75, 241);
 }
+
+.cart {
+    margin-right: 25px;
+    color: rgb(247, 235, 70);
+    font-size: 20px;
+}
