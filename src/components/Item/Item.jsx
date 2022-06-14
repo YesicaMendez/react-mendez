@@ -4,7 +4,7 @@ import '../Item/Item.css';
 
 function Item({ producto }) {
 
-    console.log(producto);
+    // console.log(producto);
     const { title, price, pictureUrl } = producto;
     // console.log(producto.producto.title);
     return (

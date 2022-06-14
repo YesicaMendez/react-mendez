@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import ItemCount from './components/ItemCount/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar';
 
@@ -18,12 +19,13 @@ function App() {
   return (
     <>
       <div className=''>
-        {console.log(`El stock actual es ${stock}`)}
+        {/* {console.log(`El stock actual es ${stock}`)} */}
         <NavBar contador={countCarrito} />
         <br></br>
         <ItemListContainer greeting={'Este es el Contenedor para mi proyecto.'}></ItemListContainer>
         <br></br>
         {/* <ItemCount inicial={1} stock={stock} onAdd={onAdd}></ItemCount> */}
+        <ItemDetailContainer/>
         <p>Mendez, Yesica Melisa</p>
       </div>
     </>
