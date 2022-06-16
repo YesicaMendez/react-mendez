@@ -1,58 +1,137 @@
 [
     {
         "id": 1,
-        "title": "Cerveza",
-        "price": 200,
+        "title": "Pedigree Carne Pollo y Cereales Perro Adulto - 21 Kg",
+        "price": 5600,
         "stock": 15,
-        "description": "Cerveza Quilmes de 1L",
-        "pictureUrl": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/fotos/b/0000000000/3008_1.jpg"
+        "category": "alimento",
+        "description": "Alimento Pedigree Carne Pollo y Cereales para Perro Adulto - 21 Kg",
+        "pictureUrl": "../img/pedigree-adulto-21.jpg"
     },
     {
         "id": 2,
-        "title": "Vodka",
-        "price": 400,
+        "title": "Eukanuba Perro Cachorro Raza Pequeña - 3 Kg",
+        "price": 2700,
         "stock": 5,
-        "description": "Smirnoff VOdka 750ml",
-        "pictureUrl": "https://www.distribuidorabebidas.com.uy/wp-content/uploads/sites/31/2018/01/botella_vodka_smirnoff_750ml.jpg"
+        "category": "alimento",
+        "description": "Alimento Eukanuba para Perro Cachorro Raza Pequeña está diseñado para cubrir todas las necesidades nutricionales que tienen los cachorros de raza pequeña los primeros 12 meses de edad.",
+        "pictureUrl": "../img/eukanuba-puppy.jpg"
     },
     {
         "id": 3,
-        "title": "Cerveza Corona",
-        "price": 250,
+        "title": "Pelota de Fútbol Puppis de Vinilo",
+        "price": 430,
         "stock": 10,
-        "description": "Cerveza Corona 710ml",
-        "pictureUrl": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/fotos/b/0000000060/92_1.jpg"
+        "category": "juguete",
+        "description": "La Pelota de Fútbol Puppis de Vinilo es ideal para jugar a lanzar y buscar con tu mascota, logrando mejorar su vínculo e incentivando a que tu perro haga ejercicio. Además, incluye sonido, lo que estimula la mente de tu mascota y ayuda a que descargue energía.",
+        "pictureUrl": "../img/pelotafutbol.jpg"
     },
     {
         "id": 4,
-        "title": "Vino",
-        "price": 180,
+        "title": "Royal Canin para Perro Mini Puppy - 3 Kg",
+        "price": 3500,
         "stock": 10,
-        "description": "Vino Viña de Balbo",
-        "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_830193-MLA46221819968_052021-O.webp"
+        "category": "alimento",
+        "description": "Royal Canin Mini Junior es un alimento para cachorros de raza pequeña hasta los 10 meses de edad. Su croqueta que se adapta a la forma y tamaño de los dientes de los perros de raza pequeña, contiene una combinación exclusiva de nutrientes para el mantenimiento de la salud digestiva, del equilibrio de la flora intestinal y con ello mejora la calidad de las heces.",
+        "pictureUrl": "../img/royalcanin-puppymini.jpg"
     },
     {
         "id": 5,
-        "title": "Tekila",
-        "price": 300,
+        "title": "Juguete Hueso Algodón Multicolor",
+        "price": 600,
         "stock": 5,
-        "description": "Sierra Tekila",
-        "pictureUrl": "https://alkoshop.ee/2366/tekila-sierra-tequila-silver-38-1-l.jpg"
+        "category": "juguete",
+        "description": "Este Hueso Millex de algodón multicolor es perfecto para jugar con tu mascota. Tiene dos nudos para mordisquear. Sus colores llamativos lo hacen irresistible y su forma facilita al agarre.",
+        "pictureUrl": "../img/huesomulticolor.jpg"
     },
     {
         "id": 6,
-        "title": "Fernet Branca",
-        "price": 700,
+        "title": "Moisés Poroto Copos Algodón",
+        "price": 5100,
         "stock": 5,
-        "description": "Fernet BRanca 750cc",
-        "pictureUrl": "https://labebidadetusfiestas.com.ar/37266/fernet-branca-1lt.jpg"
+        "category": "cama",
+        "description": "Moisés de contorno de jean y espuma de baja densidad, con almohadón en el centro extraíble relleno de copos y base de entretela, un lugar para que tu perro descanse cómodo y tranquilo.",
+        "pictureUrl": "../img/camaporoto.jpg"
     },
     {
         "id": 7,
-        "title": "Geseosa",
-        "price": 240,
+        "title": "Set Puppis Dental Cachorro Azul",
+        "price": 1200,
         "stock": 20,
-        "description": "Coca Cola 3L descartable",
-        "pictureUrl": "https://panchitoverduleria.cl/wp-content/uploads/2020/08/panchito-verduleria-coca-cola-3-litros.jpg"
+        "category": "juguete",
+        "description": "Set Puppis Dental Cachorro Azul. Tamaño unico.",
+        "pictureUrl": "../img/setpuppy.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Dog Chow Adulto Control Peso- 21 kg",
+        "price": 6000,
+        "stock": 20,
+        "category": "alimento",
+        "description": "El Alimento Dog Chow Control de Peso sin Colorantes está especialmente diseñado para ayudar a los perros con sobrepeso a reducir el exceso de masa corporal",
+        "pictureUrl": "../img/dogchow-peso.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Royal Canin - Perro Mini Adulto - 7.5 Kg",
+        "price": 6500,
+        "stock": 10,
+        "category": "alimento",
+        "description": "Royal Canin Mini Adult es un alimento para perros adultos de tamaño pequeño (de 1 a 10 Kg) desde los 10 meses hasta los 8 años. La L-Carnitina estimula el metabolismo de las reservas grasas.",
+        "pictureUrl": "../img/royalcanin-miniadulto.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Dog Chow - Perro Adulto Mediano Grande - 21 Kg",
+        "price": 5800,
+        "stock": 10,
+        "category": "alimento",
+        "description": "El Alimento Dog Chow Sin Colorantes Perro Adulto Mediano y Grande, está hecho con una mezcla especial libre de colorantes, con antioxidantes, vitaminas y minerales que ayuda a maximizar la calidad de vida de tu perro, día tras día.",
+        "pictureUrl": "../img/dogchow-adultomediano.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Almohadón WePets Gris - M",
+        "price": 9000,
+        "stock": 3,
+        "category": "cama",
+        "description": "El Almohadon WePets Gris, está confeccionado en gabardina suave y resistente, para darle la comodidad que tu mascota necesita. Además, podes lavarlo en el lavarropas con agua fría, siempre que lo necesites.",
+        "pictureUrl": "../img/almohadon.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Cama Lola Otto Cuadrada - S",
+        "price": 6800,
+        "stock": 4,
+        "category": "cama",
+        "description": "Colchoneta confeccionada en telas de tapicería, rellena de copos y funda con cierre para su fácil lavado.",
+        "pictureUrl": "../img/camalola.jpg"
+    },
+    {
+        "id": 13,
+        "title": "Juguete Puppis Pato de Vinilo",
+        "price": 250,
+        "stock": 5,
+        "category": "juguete",
+        "description": "El Juguete Puppis Pato de Vinilo es ideal para jugar a lanzar y buscar con tu mascota, logrando mejorar su vínculo e incentivando a que tu perro haga ejercicio.",
+        "pictureUrl": "../img/patovinilo.jpg"
+    },
+    {
+        "id": 14,
+        "title": "Pelota Dental Puppis Play",
+        "price": 1200,
+        "stock": 5,
+        "category": "juguete",
+        "description": "La Pelota Puppis Dental Play, es un juguete ideal para que tu perro se divierta de la mejor manera. Está diseñado para favorecer su salud dental mientras juega.",
+        "pictureUrl": "../img/pelotadental.jpg"
+    },
+    {
+        "id": 15,
+        "title": "Colchoneta WePets Eterna Amarilla - L",
+        "price": 10900,
+        "stock": 2,
+        "category": "cama",
+        "description": "La Colchoneta WePets Eterna es la opción de descanso “todo terreno” que tu mascota está necesitando! Está fabricada con materiales antidesgarro que resisten el uso intenso. Es impermeable, por lo que la podés usar tanto adentro como afuera. ",
+        "pictureUrl": "../img/camaamarilla.jpg"
     }
 ]

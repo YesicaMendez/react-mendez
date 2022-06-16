@@ -1,40 +1,57 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
+
 import ItemList from "../ItemList/ItemList";
 
-function ItemListContainer({ greeting }) {
+function ItemListContainer() {
+  const { categoryname } = useParams();
+  let productFilter = [];
 
-  const [productos, setProductos] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    const getProductos = new Promise((res, rej) => {
-      setTimeout(() => {
-        res([
-          { id: '1', title: 'Cerveza', price: 200, pictureUrl: 'https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/fotos/b/0000000000/3008_1.jpg' },
-          { id: '2', title: 'Vodka', price: 400, pictureUrl: 'https://www.distribuidorabebidas.com.uy/wp-content/uploads/sites/31/2018/01/botella_vodka_smirnoff_750ml.jpg' },
-          { id: '3', title: 'Cerveza Corona', price: 250, pictureUrl: 'https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/fotos/b/0000000060/92_1.jpg' },
-          { id: '4', title: 'Vino', price: 180, pictureUrl: 'https://http2.mlstatic.com/D_NQ_NP_830193-MLA46221819968_052021-O.webp' },
-          { id: '5', title: 'Tekila', price: 300, pictureUrl: 'https://alkoshop.ee/2366/tekila-sierra-tequila-silver-38-1-l.jpg' },
-          { id: '6', title: 'Fernet Branca', price: 700, pictureUrl: 'https://labebidadetusfiestas.com.ar/37266/fernet-branca-1lt.jpg' },
-          { id: '7', title: 'Geseosa', price: 240, pictureUrl: 'https://panchitoverduleria.cl/wp-content/uploads/2020/08/panchito-verduleria-coca-cola-3-litros.jpg' },
-        ]);
-      }, 2000);
-    });
-
-    getProductos
-      .then((result) => {
-        setProductos(result)
+    const getProductDetail = () => fetch('../listproduct.json')
+      .then((response) => response.json())
+      .then((data) => {
+        if (categoryname) {
+          productFilter = data.filter(item => item.category == categoryname);
+        } else {
+          productFilter = data;
+        }
+        setProducts(productFilter);
+        setLoading(false);
       })
       .catch((error) => {
-        console.log('No se pudo obtener los productos');
+        console.log('Error:' + error);
+        setError(true);
       })
-  }, []);
+      .finally(() => {
+        setLoading(false)
+      });
 
-  return (
-    <>
-      <h1>{greeting}</h1>
-      <ItemList productos={productos}></ItemList>
-    </>
-  )
+    setTimeout(() => {
+      getProductDetail();
+    }, 2000);
+  });
+
+  if (loading) {
+    return (<div>Loading...</div>)
+  } else {
+    if (error) {
+      return <div>Error!!</div>
+    } else {
+      return (
+        <>
+          <div>
+            <h1 className="text-center my-3">"Encontra todo para tu Mascota"</h1>
+          </div>
+          <ItemList productos={products}></ItemList>
+        </>
+      )
+    }
+  }
 }
 
 export default ItemListContainer;

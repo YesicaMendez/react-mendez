@@ -17,7 +17,7 @@ function ItemCount({ inicial, stock, onAdd }) {
 
     const agregar = () => {
         if (count <= stock){
-            onAdd(count);
+            alert(`Se suma ${count} productos al carrito.`);
             reset();
         } else {
             alert('No hay suficiente stock del producto.');
@@ -31,9 +31,9 @@ function ItemCount({ inicial, stock, onAdd }) {
     return (
         <>
             <div className="row">
-                <div className="offset-md-4 col-md-4 card text-center p-3 bg-secondary bg-gradient bg-opacity-10">
-                    <h3 className="card-title">Agregando Items</h3>
-                    <div className="row my-2">
+                <div className="offset-2 col-8 card text-center p-2 bg-secondary bg-gradient bg-opacity-10">
+                    <p className="mb-2">Seleccione Cantidad:</p>
+                    <div className="row mb-2">
                         <button className="offset-2 col-2 btn btn-warning fw-bold" onClick={restar}>-</button>
                         <h4 className="col-4">{count}</h4>
                         <button className="col-2 btn btn-warning fw-bold" onClick={sumar}>+</button>
