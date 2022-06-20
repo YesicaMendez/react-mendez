@@ -34,7 +34,7 @@ function ItemListContainer() {
     setTimeout(() => {
       getProductDetail();
     }, 2000);
-  });
+  },[categoryname]);
 
   if (loading) {
     return (<div>Loading...</div>)

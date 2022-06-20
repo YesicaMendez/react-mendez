@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function ItemCount({ inicial, stock, onAdd }) {
-    const [count, setCount] = useState(inicial);
+    const [count, setCount] = useState(1);
 
     const sumar = () => {
         count < stock
@@ -17,8 +17,7 @@ function ItemCount({ inicial, stock, onAdd }) {
 
     const agregar = () => {
         if (count <= stock){
-            alert(`Se suma ${count} productos al carrito.`);
-            reset();
+            onAdd(count);
         } else {
             alert('No hay suficiente stock del producto.');
             document.getElementById('btnAgregar').disabled= true;
