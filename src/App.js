@@ -9,13 +9,11 @@ import MyProvider from './context/CartContext';
 
 function App() {
 
-  const [countCarrito, setCountCarrito] = useState(0);
-
   return (
     <>
       <BrowserRouter>
         <MyProvider>
-          <NavBar contador={countCarrito} />
+          <NavBar />
           <Routes>
             <Route path='/' element={<ItemListContainer />} />
             <Route path='/category/:categoryname' element={<ItemListContainer />} />

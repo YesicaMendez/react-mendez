@@ -35,7 +35,6 @@ const MyProvider = ({ children }) => {
             return
         }
         const deleteProduct = newCart.filter(prod => prod.id !== producto.id);
-        console.log(`Se quitó del carrito a "${producto.name}"`);
         setCart(deleteProduct);
     }
 
@@ -43,12 +42,22 @@ const MyProvider = ({ children }) => {
         setCart([]);
     }
 
+    const getCartTotal = () => {
+        return cart.reduce((acc, x) => (acc += x.price * x.quantity) , 0);
+    }
+
+    const getItemQuantity = () => {
+        return cart.reduce((acc, x) => acc += x.quantity , 0);
+    }
+
     return <Provider value={{
         cart,
         addItem, 
         removeItem,
         clearCart,
-        setCart
+        setCart,
+        getCartTotal,
+        getItemQuantity
 
     }}>{children}</Provider>
 }

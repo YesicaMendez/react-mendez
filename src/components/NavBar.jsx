@@ -4,8 +4,12 @@ import Logo from './Logo';
 import { Link } from 'react-router-dom';
 
 import './NavBar.css';
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
-function NavBar({ contador }) {
+function NavBar() {
+    const { getItemQuantity } = useContext(CartContext);
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light navbarCustomize">
             <div className="container-fluid">
@@ -29,7 +33,12 @@ function NavBar({ contador }) {
                         </li>
                     </ul>
                 </div>
-                <div className="cart"><span className='fw-bolder'> {contador} </span><CartWidget></CartWidget></div>
+                <Link to={`/cart`} className="cart">
+                    {getItemQuantity() > 0
+                        ? <span className='fw-bolder'>{getItemQuantity()} <CartWidget /></span>
+                        : null
+                    }
+                </Link>
             </div>
         </nav>
     )

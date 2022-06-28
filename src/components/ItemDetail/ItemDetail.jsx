@@ -20,7 +20,6 @@ function ItemDetail({ product }) {
         setStock(stock-quantityToAdd);
         setCountCart(quantityToAdd);
         addItem(product, quantityToAdd);
-        console.log(cart);
     }
 
     return (
