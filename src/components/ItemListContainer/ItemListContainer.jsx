@@ -1,40 +1,52 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
 import ItemList from "../ItemList/ItemList";
 
 function ItemListContainer() {
   const { categoryname } = useParams();
-  let productFilter = [];
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    const getProductDetail = () => fetch('../listproduct.json')
-      .then((response) => response.json())
-      .then((data) => {
-        if (categoryname) {
-          productFilter = data.filter(item => item.category == categoryname);
-        } else {
-          productFilter = data;
-        }
-        setProducts(productFilter);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log('Error:' + error);
-        setError(true);
-      })
-      .finally(() => {
-        setLoading(false)
-      });
 
-    setTimeout(() => {
-      getProductDetail();
-    }, 2000);
-  },[categoryname]);
+    const db = getFirestore();
+
+    const itemsCollection = collection(db, 'items');
+
+    if (categoryname) {
+      const q = query(itemsCollection, where('category', '==', categoryname));
+
+      getDocs(q)
+        .then((snapshot) => {
+          setProducts(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.log('Error:' + error);
+          setError(true);
+        })
+        .finally(() => {
+          setLoading(false)
+        });
+    } else {
+      getDocs(itemsCollection)
+        .then((snapshot) => {
+          setProducts(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.log('Error:' + error);
+          setError(true);
+        })
+        .finally(() => {
+          setLoading(false)
+        })
+    }
+  }, [categoryname]);
 
   if (loading) {
     return (<div>Loading...</div>)
