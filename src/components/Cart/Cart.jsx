@@ -64,7 +64,7 @@ function Cart() {
                     <div>
                       <h3 className="text-center fs-4 text mb-4">Total Carrito: $ {getCartTotal()}</h3>
                       <Link to={`/`}><button className="btn btn-success">Seguir comprando</button></Link>
-                      <Link to={`/cart`}><button className="btn btn-info ms-4">Continuar al Pago</button></Link>
+                      <Link to={`/checkout/`}><button className="btn btn-info ms-4">Continuar al Pago</button></Link>
                       <button className="btn btn-warning ms-4" onClick={() => clearCart()}>Vaciar Carrito</button>
                     </div>
                   }
