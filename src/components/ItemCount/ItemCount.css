@@ -1,0 +1,30 @@
+.btnCount {
+    border-radius: 1em !important;
+}
+
+.btnCount:hover {
+    transition: 1031ms;
+    transform: translateY(-3px);
+    font-weight: bolder;
+    box-shadow: #0000005e 1px 1px 3px 2px;
+}
+
+.btnCart {
+    padding: 5px 5px;
+    border-color: rgb(26, 132, 239);
+    color: rgb(0, 0, 255);
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 0.6em;
+    background-image: -webkit-linear-gradient(45deg, rgb(0, 174, 255) 50%, transparent 50%);
+    background-image: linear-gradient(45deg, rgb(0, 174, 255) 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+}
+
+.btnCart:hover {
+    color: black;
+    background-position: 0;
+}
