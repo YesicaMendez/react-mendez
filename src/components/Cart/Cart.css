@@ -1,5 +1,13 @@
 .cart-item-img{
     width: 100%;
-    max-width: 100px;
-    min-width: 50px;
+    max-width: 140px;
+    min-width: 30px;
+}
+
+.itemCart-title{
+    border-radius: 0.6em;
+    font-family: 'Montserrat', sans-serif;
+    padding: 3px 5px;
+    font-size: 1em;
+    background-color: rgb(252, 196, 92);
 }
