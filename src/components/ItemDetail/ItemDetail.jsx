@@ -5,6 +5,7 @@ import { CartContext } from '../../context/CartContext';
 import ItemCount from '../ItemCount/ItemCount';
 import Swal from 'sweetalert2';
 import '../ItemDetail/ItemDetail.css';
+import { useEffect } from 'react';
 
 
 function ItemDetail({ product }) {
@@ -14,6 +15,15 @@ function ItemDetail({ product }) {
 
     const [stock, setStock] = useState(product.stock);
     const [countCart, setCountCart] = useState(0);
+
+    useEffect(() => {
+        const cartLocal = JSON.parse(localStorage.getItem('productos') ?? []);
+        let itemFind = cartLocal.find(item => item.id == id);
+        if (itemFind) {
+            const count = itemFind.quantity;
+            itemFind && setStock(stock - count);
+        }
+    }, []);
 
     const onAdd = (quantityToAdd) => {
         Swal.fire({

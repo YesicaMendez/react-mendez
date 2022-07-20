@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
+import { faHouse, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 import "../Cart/Cart.css";
 
 function Cart() {
@@ -26,7 +26,7 @@ function Cart() {
                     </div>
                   )) ||
                     cart.map((item) => (
-                      <div className="row g-1 align-items-center mb-3 pb-2 border-bottom border-warning">
+                      <div key={item.id} className="row g-1 align-items-center mb-3 pb-2 border-bottom border-warning">
                         <div className="col-3">
                           <img
                             className="cart-item-img img-responsive"
@@ -61,7 +61,7 @@ function Cart() {
             </div>
             <div className="offset-1 col-10 offset-md-0 col-md-3 d-flex justify-content-center">
               {carritoVacio ?
-                <Link to={`/`}><button className="btn btn-info">Volver al inicio</button></Link>
+                <Link to={`/`}><button className="btn btn-info"><FontAwesomeIcon icon={faHouse}/> Volver al inicio</button></Link>
                 :
                 <div className="card col-10 border-0 mt-2">
                   <div className="card-header text-center">
