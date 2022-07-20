@@ -7,6 +7,9 @@ Este proyecto es el trabajo final del curso de CODERHOUSE de React. Se trata de 
 Se encuentra deployado en Vercel, para facilitar el testeo de su funcionalidad, en el siguiente link:
 https://react-mendez.vercel.app
 
+GIF del proyecto:
+https://github.com/YesicaMendez/react-mendez/blob/master/Coco-Pets-Shop-Mendez.gif
+
 Si se desea correrlo de forma local:
 1. Descargar este repositorio.
 2. Abrir el proyecto con su editor de codigo favorito.
